@@ -7,6 +7,7 @@ const { User } = require('./models/User');
 
 var app = express();
 
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
