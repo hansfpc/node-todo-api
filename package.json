@@ -4,23 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha server/**/*.test.js",
+    "start": "node server/server.js",
+    "test": "export NODE_ENV=test || SET NODE_ENV=test && mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
-  "keywords": [],
+  "engines": {
+    "node": "6.2.2"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.0",
-    "express": "^4.15.4",
-    "mongodb": "^2.2.31",
-    "mongoose": "^4.11.10",
-    "morgan": "^1.8.2"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.15.0",
+    "mongodb": "^2.2.5",
+    "mongoose": "^4.5.9"
   },
   "devDependencies": {
-    "expect": "^21.0.2",
-    "mocha": "^3.5.1",
-    "nodemon": "^1.12.0",
-    "supertest": "^3.0.0"
+    "expect": "^1.20.2",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "supertest": "^2.0.0"
   }
 }
